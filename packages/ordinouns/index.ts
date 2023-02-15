@@ -1,4 +1,4 @@
-import { providers } from 'ethers';
+import { ethers } from 'ethers';
 import {
     ChainId,
     getContractAddressesForChainOrThrow,
@@ -12,7 +12,7 @@ import { promises as fs } from 'fs';
 
 const RPC_URL = 'https://mainnet.infura.io/v3/145ce7b859284acb90fd94046cc16dd1';
 
-const provider = new providers.JsonRpcProvider(RPC_URL);
+const provider = new ethers.providers.JsonRpcProvider(RPC_URL);
 
 const contractAddresses = getContractAddressesForChainOrThrow(ChainId.Mainnet);
 
